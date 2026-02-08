@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo i {
+    color: orange;
+    margin-right: 8px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 25px;
+}
+
+.nav-link ul {
+    display: flex;
+    gap: 15px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    color: orange;
+}
+
+.hero {
+    height: 90vh;
+    background: url("https://coolmaterial.com/wp-content/uploads/2018/11/Lamborghini-SC18-Alston.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    background: orange;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.secondary {
+    background: transparent;
+    border: 2px solid orange;
+}
+
+.hero-buttons button:hover {
+    opacity: 0.85;
+}
+
+.usp {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.usp h2 {
+    margin: 80px;
+    color: red;
+}
+
+.usp-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 12px 245px;
+    color: white;
+    gap: 25px;
+}
+
+.usp-card {
+    background: #1c1c1c;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.usp-card:hover {
+    transform: translateY(-6px);
+}
+
+.usp-card i {
+    margin: 15px;
+    font-size: 25px;
+}
+
+.usp-card h3 {
+    margin: 25px;
+}
+
+.wcu {
+    margin: 80px 245px;
+}
+
+.wcu h2 {
+    color: red;
+    text-align: center;
+    margin: 25px;
+}
+
+.wcu .grid {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 25px;
+}
+
+.grid-card {
+    background: #1c1c1c;
+    border-radius: 6px;
+    transition: 0.3s;
+    padding: 15px;
+}
+
+.services{
+    margin: 25px 245px;
+}
+
+.service h2 {
+    color: red;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin:40px 245px;
+}
+
+.service-card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    color: white;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #2e7d32;
+}
+
+.select-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.total-box {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+h2{
+    text-align:center;
+    margin:40px;
+    color: red;
+}
+
+.filters{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.filters button{
+    padding:8px 15px;
+    margin:5px;
+    border:none;
+    background:#0a7cff;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.filters button:hover{
+    background:#065fd4;
+}
+
+.mechanics-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.mechanic-card{
+    background:#fff;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.mechanic-card:hover{
+    transform:translateY(-6px);
+}
+
+.mechanic-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:8px;
+    padding:5px 10px;
+    background:green;
+    color:white;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 10px 125px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.booking{
+    margin:40px 200px;
+    background:#111;
+    padding:25px;
+    border-radius:12px;
+}
+.booking input,select,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:6px;
+    border:none;
+}
+.booking button{
+    padding:12px 25px;
+    background:orange;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+}
+.success{color:lightgreen;margin-top:15px}
+
+.contact{
+    margin:80px 200px;
+    color:white;
+}
+
+.contact h2{
+    color:red;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+}
+
+.contact-info p{
+    margin:15px 0;
+    font-size:16px;
+}
+
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:none;
+    font-size:14px;
+}
+
+.contact-form textarea{
+    resize:none;
+    height:90px;
+}
+
+.membership{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.contact-form button{
+    padding:10px 25px;
+    background:orange;
+    color:white;
+    border:none;
+    cursor:pointer;
+    opacity:0.5;
+}
+
+.contact-form button:enabled{
+    opacity:1;
+}

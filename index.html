@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mechenical Workshop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <div class="logo">
+            <i class="fas fa-car"></i>
+            <span>Smart Workshop</span>
+        </div>
+        <div class="nav-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Bookings</a></li>
+                <li><a href="#">Mechanics</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Smart Mechanical Car Workshop</h1>
+                <p class="tagline">Expert Car Care by Highly Trained Mechanics</p>
+
+                <div class="hero-buttons">
+                    <a href="#contact"><button class="first">Book Service</button></a>
+                    <a href="#menu"><button class="second">View Services</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="usp">
+            <h2>Our Unique Selling Points</h2>
+
+            <div class="usp-container">
+                <div class="usp-card">
+                    <i class="fas fa-user-cog"></i>
+                    <h3>Certified Mechanics</h3>
+                    <p>Highly trained and certified professionals.</p>
+                </div>
+
+                <div class="usp-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Advanced Diagnostics</h3>
+                    <p>Latest tools for accurate fault detection.</p>
+                </div>
+
+                <div class="usp-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Genuine Spare Parts</h3>
+                    <p>Only authentic and high-quality components.</p>
+                </div>
+
+                <div class="usp-card">
+                    <i class="fas fa-rupee-sign"></i>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden charges, clear estimates.</p>
+                </div>
+
+                <div class="usp-card">
+                    <i class="fas fa-stopwatch"></i>
+                    <h3>Fast Service</h3>
+                    <p>Quick turnaround without compromising quality.</p>
+                </div>
+
+                <div class="usp-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Free Inspection</h3>
+                    <p>Complimentary vehicle health check.</p>
+                </div>
+
+                <div class="usp-card">
+                    <i class="fas fa-phone-volume"></i>
+                    <h3>Emergency Support</h3>
+                    <p>24/7 breakdown assistance available.</p>
+                </div>
+            </div>
+        </div>
+        <div class="wcu">
+            <h2>
+                Why Choose Us
+            </h2>
+            <div class="grid">
+                <div class="grid-card">✔ Certified Mechanics</div>
+                <div class="grid-card">✔ Advanced Diagnostics</div>
+                <div class="grid-card">✔ Genuine Spare Parts</div>
+                <div class="grid-card">✔ Transparent Pricing</div>
+                <div class="grid-card">✔ Fast Delivery</div>
+                <div class="grid-card">✔ Free Inspection</div>
+            </div>
+        </div>
+    </section>
+    <section class="service">
+        <h2>Our Services</h2>
+        <div class="service-container" id="servicesContainer"></div>
+        <div class="total-box">
+            Total Price: ₹ <span id="total">0</span>
+        </div>
+    </section>
+    <section class="mechanic">
+        <h2>👨‍🔧 Meet Our Expert Mechanics</h2>
+
+        <div class="filters" id="filterButtons"></div>
+
+        <div class="mechanics-container" id="mechanicsContainer"></div>
+    </section>
+    <section class="gallery">
+        <h2>
+            Workshop Gallery
+        </h2>
+        <div class="gallery-grid">
+            <img src="https://i.pinimg.com/736x/38/10/1f/38101f7dc97fc7bb69dc9dad5b1b6019.jpg" height="145px"
+                width="24px">
+            <img src="https://www.autotrainingcentre.com/wp-content/uploads/2021/10/DSC1128.jpg" alt="">
+            <img src="https://t3.ftcdn.net/jpg/05/23/55/70/360_F_523557024_2e6dei58CUiezc4xtNBuoNZFy2EOFY1p.jpg" alt="">
+            <img src="https://images.autoguru.com.au/_next/image?url=https%3A%2F%2Fcdn.au.autoguru.com%2Fsupplier-images%2FWorkshop_985%2Fgallery-2-20171023094059.jpg&w=640&q=60"
+                alt="">
+
+        </div>
+    </section>
+    <section class="booking">
+        <h2>Confirm Booking</h2>
+
+        <input type="text" id="custName" placeholder="Customer Name">
+        <input type="email" id="custEmail" placeholder="Email">
+        <input type="text" id="custPhone" placeholder="Phone Number">
+        <input type="text" id="carBrand" placeholder="Car Brand">
+        <input type="text" id="carModel" placeholder="Car Model">
+
+        <textarea id="selectedServices" readonly placeholder="Selected Services"></textarea>
+
+        <select id="serviceType">
+            <option value="Normal">Normal</option>
+            <option value="Express">Express (+₹500)</option>
+        </select>
+
+        <input type="date" id="serviceDate">
+
+        <div class="total-box">
+            Final Amount: ₹ <span id="finalTotal">0</span>
+        </div>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+
+        <p id="successMsg"></p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>📍 Main Road, City</p>
+                <p>📞 9876543210</p>
+                <p>✉️ info@smartworkshop.com</p>
+                <p>🕒 Mon – Sat : 9:00 AM – 7:00 PM</p>
+            </div>
+
+            <div class="contact-form">
+                <select id="queryType">
+                    <option value="">Query Type</option>
+                    <option>Service Related</option>
+                    <option>Booking Issue</option>
+                    <option>Membership</option>
+                    <option>General Inquiry</option>
+                </select>
+
+                <label class="membership">
+                    <input type="checkbox" id="membership">
+                    I am a premium member
+                </label>
+
+                <textarea id="message" placeholder="Message"></textarea>
+
+                <button id="sendBtn" disabled>Send</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
