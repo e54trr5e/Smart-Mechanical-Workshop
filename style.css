@@ -3,8 +3,11 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
     background-color: black;
+    font-family: 'Poppins', sans-serif;
 }
 
 .logo {
@@ -60,6 +63,20 @@ ul li a:hover {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+  .service-container,
+  .usp-container,
+  .wcu,
+  .booking,
+  .contact {
+      margin: 20px;
+  }
+
+  .hero h1 {
+      font-size: 28px;
+  }
 }
 
 .tagline {
@@ -372,3 +389,4 @@ h2{
 .contact-form button:enabled{
     opacity:1;
 }
+
