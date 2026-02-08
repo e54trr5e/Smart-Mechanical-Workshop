@@ -175,7 +175,6 @@ specializations.forEach((spec, index) => {
     const btn = document.createElement("button");
     btn.textContent = spec;
 
-    // Default ACTIVE = All
     if(index === 0) btn.classList.add("active");
 
     btn.onclick = () => {
@@ -234,14 +233,19 @@ function updateFinalTotal() {
     finalTotalDisplay.innerText = finalAmount;
 }
 
-
 function confirmBooking() {
+
     const name = custName.value.trim();
     const email = custEmail.value.trim();
     const phone = custPhone.value.trim();
+    const brand = carBrand.value.trim();
+    const model = carModel.value.trim();
     const date = serviceDate.value;
+    const servicesList = selectedServices.value;
+    const type = serviceTypeSelect.value;
+    const amount = finalTotalDisplay.innerText;
 
-    if (!name || !email || !phone || !date) {
+    if (!name || !email || !phone || !brand || !model || !date) {
         alert("Please fill all booking details");
         return;
     }
@@ -260,6 +264,41 @@ function confirmBooking() {
         alert("Please select at least one service");
         return;
     }
+
+    const summary =
+ `             BOOKING SUMMARY
+
+Customer : ${name}
+Email    : ${email}
+Phone    : ${phone}
+
+Car      : ${brand} ${model}
+Date     : ${date}
+Type     : ${type}
+
+Services:
+${servicesList}
+
+Final Amount : ₹ ${amount}
+
+Confirm booking?`;
+
+    const confirmed = confirm(summary);
+
+    if (!confirmed) return;
+
+    document.getElementById("successMsg").className = "success";
+    document.getElementById("successMsg").innerText =
+        "✅ Booking Confirmed Successfully! Our team will contact you soon.";
+
+    // optional reset
+    document.querySelectorAll(".booking input, .booking textarea")
+        .forEach(el => el.value = "");
+
+    selectedServices.value = "";
+    finalTotalDisplay.innerText = 0;
+}
+
 
     document.getElementById("successMsg").style.color = "lightgreen";
     document.getElementById("successMsg").innerText =
@@ -329,3 +368,4 @@ navLinks.forEach(link => {
         }
     });
 });
+
