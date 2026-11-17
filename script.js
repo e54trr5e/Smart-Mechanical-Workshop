@@ -77,7 +77,7 @@ services.forEach((service, index) => {
 
 
 
- 3. SERVICE PRICE CALCULATION
+// 3. SERVICE PRICE CALCULATION
 
 
 const selectedServicesBox = document.getElementById("selectedServices");
